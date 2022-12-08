@@ -37,11 +37,18 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  width: 100%;
 }
 
 section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 textarea {
@@ -122,10 +129,25 @@ body {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 .logo {
@@ -506,26 +528,49 @@ body {
 .spacial-list {
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
 .spacial-list__item {
-  flex-basis: calc((100% - 90px) / 4);
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .spacial-list__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .spacial-list__item {
+    width: calc((100% - 90px) / 4);
+  }
 }
 
 .spacial-list__picture {
   background: #f5f4fa;
   border-radius: 4px;
-  width: 270px;
+  width: 450px;
   height: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
 }
+@media screen and (min-width: 768px) {
+  .spacial-list__picture {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .spacial-list__picture {
+    width: 270px;
+  }
+}
 
 .spacial-list__icon {
   width: 70px;
   height: 70px;
+  justify-content: center;
+  align-items: center;
 }
 
 .spacial-list__uptitle {
@@ -533,8 +578,15 @@ body {
   line-height: 1.1428;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
   color: var(--second-title-color);
   margin-bottom: 10px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .spacial-list__uptitle {
+    text-align: left;
+  }
 }
 
 .spacial-list__text {
