@@ -596,6 +596,15 @@ body {
   color: var(--text-color);
 }
 
+.doing__container {
+  display: block;
+}
+@media screen and (max-width: 1199px) {
+  .doing__container {
+    display: none;
+  }
+}
+
 .doing {
   padding-top: 0;
 }
@@ -707,7 +716,6 @@ body {
   gap: 30px;
   cursor: pointer;
   flex-wrap: wrap;
-  width: 100%;
 }
 
 .client-list__link {
