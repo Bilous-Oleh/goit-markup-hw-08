@@ -642,6 +642,7 @@ body {
 .team-list {
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
 .team-list__item {
@@ -679,18 +680,25 @@ body {
 .client__title {
   text-align: center;
 }
+@media screen and (max-width: 1199px) {
+  .client__title {
+    font-size: 28px;
+  }
+}
 
 .client-list {
   display: flex;
   gap: 30px;
   cursor: pointer;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .client-list__link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
+  width: 210px;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -700,6 +708,26 @@ body {
 }
 .client-list__link:hover {
   border-color: #2196f3;
+}
+@media screen and (min-width: 768px) {
+  .client-list__link {
+    width: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .client-list__link {
+    width: calc((100% - 150px) / 6);
+  }
+}
+@media screen and (min-width: 768px) {
+  .client-list__link {
+    width: 226px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .client-list__link {
+    width: 170px;
+  }
 }
 
 .client-list__icon {

@@ -13,6 +13,7 @@
 .team-list {
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
 .team-list__item {
