@@ -638,6 +638,11 @@ body {
 .team__title {
   text-align: center;
 }
+@media screen and (max-width: 1199px) {
+  .team__title {
+    font-size: 28px;
+  }
+}
 
 .team-list {
   display: flex;
@@ -648,10 +653,21 @@ body {
 .team-list__item {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .team-list__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team-list__item {
+    width: calc((100% - 90px) / 4);
+  }
 }
 
 .card {
-  width: 270px;
+  width: 100%;
   background: #ffffff;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -712,20 +728,12 @@ body {
 @media screen and (min-width: 768px) {
   .client-list__link {
     width: calc((100% - 60px) / 3);
-  }
-}
-@media screen and (min-width: 1200px) {
-  .client-list__link {
-    width: calc((100% - 150px) / 6);
-  }
-}
-@media screen and (min-width: 768px) {
-  .client-list__link {
     width: 226px;
   }
 }
 @media screen and (min-width: 1200px) {
   .client-list__link {
+    width: calc((100% - 150px) / 6);
     width: 170px;
   }
 }
