@@ -16,17 +16,20 @@
 
 .hero__container {
   max-width: 696px;
+  @media screen and (max-width: 1199px) {
+    max-width: 360px;
+  }
 }
 
 .hero__title {
   @include font(null, 44px, 1.3636, 0.06em);
-  // font-size: 44px;
-  // line-height: 1.3636;
-  // letter-spacing: 0.06em;
   text-align: center;
   text-transform: uppercase;
   color: var(--first-title-color);
   margin-bottom: 30px;
+  @media screen and (max-width: 1199px) {
+    font-size: 26px;
+  }
 }
 
 .hero__btn {
@@ -34,10 +37,6 @@
   min-width: 216px;
   height: 50px;
   font-family: "Roboto";
-  // font-weight: 700;
-  // font-size: 16px;
-  // line-height: 1.875;
-  // letter-spacing: 0.06em;
   color: #ffffff;
   background: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -45,4 +44,7 @@
   border: none;
   display: block;
   margin: 0 auto;
+  @media screen and (max-width: 1199px) {
+    min-width: 200px;
+  }
 }

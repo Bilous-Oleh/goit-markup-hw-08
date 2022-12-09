@@ -497,6 +497,11 @@ body {
 .hero__container {
   max-width: 696px;
 }
+@media screen and (max-width: 1199px) {
+  .hero__container {
+    max-width: 360px;
+  }
+}
 
 .hero__title {
   font-size: 44px;
@@ -506,6 +511,11 @@ body {
   text-transform: uppercase;
   color: var(--first-title-color);
   margin-bottom: 30px;
+}
+@media screen and (max-width: 1199px) {
+  .hero__title {
+    font-size: 26px;
+  }
 }
 
 .hero__btn {
@@ -523,6 +533,11 @@ body {
   border: none;
   display: block;
   margin: 0 auto;
+}
+@media screen and (max-width: 1199px) {
+  .hero__btn {
+    min-width: 200px;
+  }
 }
 
 .spacial-list {
