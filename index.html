@@ -191,12 +191,26 @@
           <h2 class="section__title team__title">Наша команда</h2>
           <ul class="list team-list">
             <li class="team-list__item">
-              <img
-                src="./images/igor.jpg"
-                alt="Фото Ігор Дем'яненко"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="./images/igor.jpg 1x, ./images/igor-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/igor-tab.jpg 1x, ./images/igor-tab-2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/igor-mob.jpg 1x, ./images/igor-mob-2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/igor-mob.jpg"
+                  alt="Фото Ігор Дем'яненко"
+                  width="450"
+                />
+              </picture>
+
               <div class="card">
                 <h3 class="card__subtitle">Ігор Дем'яненко</h3>
                 <p class="card__text">Designer</p>
@@ -233,12 +247,26 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img
-                src="./images/olha.jpg"
-                alt="Фото Ольга Рєпіна"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="./images/olha.jpg 1x, ./images/olha-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/olha-tab.jpg 1x, ./images/olha-tab-2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/olha-mob.jpg 1x, ./images/olha-mob-2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/olha-mob.jpg"
+                  alt="Фото Ольга Рєпіна"
+                  width="450"
+                />
+              </picture>
+
               <div class="card">
                 <h3 class="card__subtitle">Ольга Рєпіна</h3>
                 <p class="card__text">Frontend Developer</p>
@@ -275,12 +303,31 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img
-                src="./images/mykola.jpg"
-                alt="Фото Микола Тарасов"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="./images/mykola.jpg 1x, ./images/mykola-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/mykola-tab.jpg    1x,
+                    ./images/mykola-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mykola-mob.jpg    1x,
+                    ./images/mykola-mob-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/mykola-mob.jpg"
+                  alt="Фото Микола Тарасов"
+                  width="450"
+                />
+              </picture>
               <div class="card">
                 <h3 class="card__subtitle">Микола Тарасов</h3>
                 <p class="card__text">Marketing</p>
@@ -317,12 +364,32 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img
-                src="./images/mikhaylo.jpg"
-                alt="Фото Михайло Єрмаков"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="./images/mikhaylo.jpg 1x, ./images/mikhaylo-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/mikhaylo-tab.jpg    1x,
+                    ./images/mikhaylo-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mikhaylo-mob.jpg    1x,
+                    ./images/mikhaylo-mob-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/mikhaylo-mob.jpg"
+                  alt="Фото Михайло Єрмаков"
+                  width="450"
+                />
+              </picture>
+
               <div class="card">
                 <h3 class="card__subtitle">Михайло Єрмаков</h3>
                 <p class="card__text">UI Designer</p>
