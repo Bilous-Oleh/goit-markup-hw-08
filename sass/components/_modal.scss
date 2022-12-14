@@ -43,6 +43,10 @@
   align-items: center;
   justify-content: center;
   background-color: transparent;
+  &:hover,
+  &:focus {
+    fill: #2196f3;
+  }
 }
 
 .is-hidden {
