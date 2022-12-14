@@ -115,6 +115,10 @@ body {
   fill: #ffffff;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .hide {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -204,6 +208,9 @@ body {
   align-items: center;
   justify-content: center;
   background-color: transparent;
+}
+.modal-close:hover, .modal-close:focus {
+  fill: #2196f3;
 }
 
 .is-hidden {
@@ -392,6 +399,11 @@ body {
   display: flex;
   gap: 50px;
 }
+@media screen and (max-width: 767px) {
+  .menu {
+    display: none;
+  }
+}
 
 .header__logo {
   padding-top: 24px;
@@ -446,7 +458,17 @@ body {
 }
 
 .contact {
-  display: flex;
+  display: block;
+}
+@media screen and (max-width: 768px) {
+  .contact {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact {
+    display: flex;
+  }
 }
 
 .contact__item {
@@ -454,9 +476,13 @@ body {
   font-size: 14px;
   line-height: 1.1429;
   letter-spacing: 0.02em;
-  display: flex;
-  align-items: center;
   cursor: pointer;
+}
+@media screen and (min-width: 1200px) {
+  .contact__item {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .contact__link {
@@ -471,6 +497,30 @@ body {
   color: #2196f3;
 }
 
+.header-contact-mail {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: #757575;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header-contact-mail:hover, .header-contact-mail:focus {
+  color: #2196f3;
+}
+
+.header-contact-tel {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: #757575;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header-contact-tel:hover, .header-contact-tel:focus {
+  color: #2196f3;
+}
+
 .contact__tel {
   margin-left: 30px;
 }
@@ -481,6 +531,144 @@ body {
 }
 .contact__link:hover .contact__icon {
   fill: currentColor;
+}
+
+.menu-open {
+  background-color: transparent;
+  border: none;
+}
+.menu-open:active, .menu-open:focus {
+  fill: #2196f3;
+}
+@media screen and (min-width: 767px) {
+  .menu-open {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background-color: #ffffff;
+}
+.mobile-menu > .mobile-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
+}
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
+.menu-close {
+  display: block;
+  margin-left: auto;
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  background-color: transparent;
+  border: none;
+}
+.menu-close:active, .menu-close:focus {
+  fill: #2196f3;
+}
+
+.mobile-container {
+  display: block;
+  position: absolute;
+  width: 100%;
+  padding: 48px 40px;
+  margin: 0 auto;
+}
+
+.menu-list {
+  margin-bottom: 306px;
+}
+
+.menu-list__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.menu-list__link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.175;
+  letter-spacing: 0.02em;
+  color: #212121;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu-list__link:active, .menu-list__link:focus {
+  color: #2196f3;
+}
+
+.mob-contact {
+  margin-bottom: 64px;
+}
+
+.mob-contact__list {
+  margin-bottom: 32px;
+}
+
+.menu-list__tel {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.1764705882;
+  letter-spacing: 0.02em;
+  color: #757575;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu-list__tel:active, .menu-list__tel:focus {
+  color: #2196f3;
+}
+
+.menu-list__email {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.1666666667;
+  letter-spacing: 0.02em;
+  color: #757575;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu-list__email:active, .menu-list__email:focus {
+  color: #2196f3;
+}
+
+.mob-soc {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 10px;
+}
+.mob-soc__item:not(:last-child)::after {
+  content: "";
+  width: 22px;
+  height: 0px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transform: rotate(90deg);
+  margin-left: 10px;
+}
+
+.mob-soc__link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2222222222;
+  letter-spacing: 0.02em;
+  color: #2196f3;
 }
 
 .hero {
@@ -918,11 +1106,28 @@ body {
 
 .footer__container {
   display: flex;
-  align-items: baseline;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contacts-list__item {
+  display: flex;
+  justify-content: center;
 }
 
 .address {
   margin-top: 20px;
+}
+
+.footer__title {
+  margin-top: 60px;
 }
 
 .contacts-list__item {
@@ -965,7 +1170,10 @@ body {
 }
 
 .footer__soc {
-  margin-left: 70px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer__title {
@@ -986,16 +1194,18 @@ body {
 }
 
 .footer__input {
-  align-items: baseline;
-  margin-left: 93px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer__input-form {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
   position: relative;
+  flex-direction: column;
 }
 
 .online-input {
@@ -1003,8 +1213,8 @@ body {
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
-  width: 358px;
   height: 50px;
+  width: 450px;
   display: flex;
   align-items: center;
   color: rgba(255, 255, 255, 0.6);
@@ -1019,8 +1229,9 @@ body {
   transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 20px;
 }
-.online-input:hover, .online-input:focus {
+.online-input:active, .online-input:focus {
   border-color: #2196f3;
 }
 
@@ -1041,11 +1252,15 @@ body {
   border: none;
   cursor: pointer;
   margin: 0 auto;
-  padding: 10px 62px 10px 28px;
+  padding: 10px 64px 10px 28px;
 }
 
 .footer__btn-icon {
   position: absolute;
-  right: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 148px;
+  bottom: 13px;
   fill: #ffffff;
 }/*# sourceMappingURL=main.css.map */

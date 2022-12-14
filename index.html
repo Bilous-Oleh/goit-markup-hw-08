@@ -28,7 +28,7 @@
   </head>
 
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header__container">
         <a href="./index.html" class="logo header__logo">
           <p class="logo__element1">
@@ -66,8 +66,97 @@
             >
           </li>
         </ul>
+        <button type="button" class="menu-open" data-menu-open>
+          <svg class="menu-open-icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-open"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+
+      <!-------------- Мобільне меню ---------------->
+
+      <div class="mobile-menu is-hidden" data-menu>
+        <div class="mobile-container">
+          <button type="button" class="menu-close" data-menu-close>
+            <svg class="menu-close-icon" width="18" height="18">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <div class="menu-wrap">
+            <ul class="menu-list">
+              <li class="menu-list__item">
+                <a class="menu-list__link link mob-current" href="./index.html"
+                  >Студія</a
+                >
+              </li>
+              <li class="menu-list__item">
+                <a class="menu-list__link link" href="./portfolio.html"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="menu-list__item">
+                <a class="menu-list__link link" href="#">Контакти</a>
+              </li>
+            </ul>
+          </div>
+          <div class="contact-wrap">
+            <ul class="mob-contact">
+              <li class="mob-contact__list">
+                <a class="menu-list__tel link" href="tel:+380961111111">
+                  +38 096 111 11 11</a
+                >
+              </li>
+              <li class="mob-contact__list">
+                <a
+                  class="menu-list__email link"
+                  href="mailto:info@devstudio.com"
+                >
+                  info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mob-soc">
+              <li class="mob-soc__item">
+                <a
+                  href=""
+                  target="_blank"
+                  rel="noopener noreffer"
+                  class="mob-soc__link link"
+                  >Instagram</a
+                >
+              </li>
+              <li class="mob-soc__item">
+                <a
+                  href=""
+                  target="_blank"
+                  rel="noopener noreffer"
+                  class="mob-soc__link link"
+                  >Twitter</a
+                >
+              </li>
+              <li class="mob-soc__item">
+                <a
+                  href=""
+                  target="_blank"
+                  rel="noopener noreffer"
+                  class="mob-soc__link link"
+                  >Facebook</a
+                >
+              </li>
+              <li class="mob-soc__item">
+                <a
+                  href=""
+                  target="_blank"
+                  rel="noopener noreffer"
+                  class="mob-soc__link link"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
 
     <main>
       <!-- Герой -->
@@ -484,7 +573,7 @@
 
     <!--------------- Підвал---------------- -->
 
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container footer__container">
         <div class="footer__contacts">
           <a href="./index.html" class="logo logo-footer">
@@ -569,7 +658,7 @@
           </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
 
     <!----------- Модальне вікно ------------->
 
@@ -661,10 +750,12 @@
         </form>
       </div>
     </div>
-    <script src="./js/modal.js"></script>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
