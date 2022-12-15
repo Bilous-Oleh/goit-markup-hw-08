@@ -177,8 +177,8 @@ body {
 }
 
 .modal {
-  width: 528px;
-  min-height: 581px;
+  width: 450px;
+  min-height: 609px;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -193,6 +193,12 @@ body {
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0) rotate(180deg);
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    min-height: 581px;
+  }
 }
 
 .modal-close {
@@ -222,10 +228,18 @@ body {
 .modal-title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 23px;
+  line-height: 1.5;
   letter-spacing: 0.03em;
   text-align: center;
   margin-bottom: 12px;
+}
+@media screen and (min-width: 1200px) {
+  .modal-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.03em;
+  }
 }
 
 .modal-field {
@@ -293,7 +307,7 @@ body {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-comment:hover, .modal-comment:focus {
+.modal-comment:focus, .modal-comment:active {
   border-color: #2196f3;
 }
 .modal-comment::-moz-placeholder {
@@ -319,8 +333,9 @@ body {
 }
 
 .check-text {
-  font-size: 14px;
-  line-height: 1.7142px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.1666666667;
   letter-spacing: 0.03em;
   color: #757575;
   transition-property: transform;
@@ -330,6 +345,13 @@ body {
   align-items: center;
   margin-top: 20px;
   margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .check-text {
+    font-size: 14px;
+    line-height: 1.7142px;
+    letter-spacing: 0.03em;
+  }
 }
 
 .check-text span {
@@ -396,12 +418,12 @@ body {
 }
 
 .menu {
-  display: flex;
   gap: 50px;
+  display: none;
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) {
   .menu {
-    display: none;
+    display: flex;
   }
 }
 
@@ -458,16 +480,18 @@ body {
 }
 
 .contact {
-  display: block;
+  display: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .contact {
-    display: none;
+    display: flex;
+    flex-direction: column;
   }
 }
 @media screen and (min-width: 1200px) {
   .contact {
     display: flex;
+    flex-direction: row;
   }
 }
 
@@ -476,12 +500,12 @@ body {
   font-size: 14px;
   line-height: 1.1429;
   letter-spacing: 0.02em;
-  cursor: pointer;
 }
 @media screen and (min-width: 1200px) {
   .contact__item {
     display: flex;
     align-items: center;
+    cursor: pointer;
   }
 }
 
@@ -521,8 +545,10 @@ body {
   color: #2196f3;
 }
 
-.contact__tel {
-  margin-left: 30px;
+@media screen and (min-width: 1200px) {
+  .contact__tel {
+    margin-left: 30px;
+  }
 }
 
 .contact__icon {
@@ -540,7 +566,7 @@ body {
 .menu-open:active, .menu-open:focus {
   fill: #2196f3;
 }
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
   .menu-open {
     display: none;
   }
@@ -559,11 +585,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
   overflow: auto;
-}
-@media screen and (min-width: 768px) {
-  .mobile-menu {
-    display: none;
-  }
 }
 
 .menu-close {
@@ -675,6 +696,8 @@ body {
   display: flex;
   padding: 118px 60px;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero-img-mob.jpg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
   margin-left: auto;
   margin-right: auto;
   background-position: center;
@@ -708,12 +731,12 @@ body {
 }
 
 .hero__container {
-  max-width: 696px;
+  max-width: 360px;
   padding: 0;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .hero__container {
-    max-width: 360px;
+    max-width: 696px;
   }
 }
 
@@ -738,7 +761,7 @@ body {
   font-size: 16px;
   line-height: 1.875;
   letter-spacing: 0.06em;
-  min-width: 216px;
+  min-width: 200px;
   height: 50px;
   font-family: "Roboto";
   color: #ffffff;
@@ -749,9 +772,9 @@ body {
   display: block;
   margin: 0 auto;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .hero__btn {
-    min-width: 200px;
+    min-width: 216px;
   }
 }
 
@@ -1096,6 +1119,7 @@ body {
 }
 
 .footer {
+  display: flex;
   background: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -1104,30 +1128,35 @@ body {
   margin-right: auto;
 }
 
-.footer__container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+@media screen and (max-width: 768px) {
+  .footer__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__container {
+    display: flex;
+    align-items: baseline;
+  }
 }
 
-.logo-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.contacts-list__item {
-  display: flex;
-  justify-content: center;
+@media screen and (max-width: 768px) {
+  .logo-footer {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .address {
   margin-top: 20px;
+  margin-bottom: 60px;
 }
-
-.footer__title {
-  margin-top: 60px;
+@media screen and (min-width: 1200px) {
+  .address {
+    margin-top: 20px;
+  }
 }
 
 .contacts-list__item {
@@ -1137,6 +1166,12 @@ body {
 }
 .contacts-list__item:not(:last-child) {
   margin-bottom: 9px;
+}
+@media screen and (max-width: 768px) {
+  .contacts-list__item {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .contacts-list__map {
@@ -1170,42 +1205,54 @@ body {
 }
 
 .footer__soc {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .footer__soc {
+    margin-left: 70px;
+  }
 }
 
 .footer__title {
   font-size: 14px;
   line-height: 1.1428;
   letter-spacing: 0.03em;
+  display: flex;
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 767px) {
+  .footer__title {
+    justify-content: center;
+  }
+}
 
-.footer__soc-list {
-  margin-top: 20px;
+@media screen and (min-width: 1200px) {
+  .footer__soc-list {
+    margin-top: 20px;
+  }
 }
 
 .footer__link {
   background: rgba(255, 255, 255, 0.1);
 }
 
-.footer__input {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+@media screen and (min-width: 1200px) {
+  .footer__input {
+    align-items: baseline;
+    margin-left: 93px;
+  }
 }
 
-.footer__input-form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  flex-direction: column;
+@media screen and (min-width: 1200px) {
+  .footer__input-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative;
+  }
 }
 
 .online-input {
@@ -1214,7 +1261,6 @@ body {
   line-height: 1.25;
   letter-spacing: 0.03em;
   height: 50px;
-  width: 450px;
   display: flex;
   align-items: center;
   color: rgba(255, 255, 255, 0.6);
@@ -1225,14 +1271,28 @@ body {
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 16px;
-  margin-right: 12px;
   transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  margin-bottom: 20px;
 }
-.online-input:active, .online-input:focus {
+.online-input:hover, .online-input:focus {
   border-color: #2196f3;
+}
+@media screen and (max-width: 480px) {
+  .online-input {
+    width: 450px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .online-input {
+    margin-right: 12px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    width: 358px;
+  }
 }
 
 .footer__btn {
@@ -1251,16 +1311,19 @@ body {
   border-radius: 4px;
   border: none;
   cursor: pointer;
+  margin: auto;
+  padding: 10px 62px 10px 28px;
   margin: 0 auto;
-  padding: 10px 64px 10px 28px;
 }
-
 .footer__btn-icon {
   position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  right: 148px;
-  bottom: 13px;
+  right: 28px;
   fill: #ffffff;
+}
+@media screen and (min-width: 1200px) {
+  .footer__btn-icon {
+    position: absolute;
+    right: 28px;
+    fill: #ffffff;
+  }
 }/*# sourceMappingURL=main.css.map */

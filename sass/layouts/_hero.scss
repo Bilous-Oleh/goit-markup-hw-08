@@ -7,9 +7,9 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../../images/hero-img-mob.jpg);
-  // background-position: 50% 50%;
-  // background-repeat: no-repeat;
+    url(../images/hero-img-mob.jpg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
   // max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
@@ -23,14 +23,14 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../../images/hero-img-mob-2x.jpg);
+      url(../images/hero-img-mob-2x.jpg);
   }
   @media screen and (min-width: 480px) {
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../../images/hero-img-tab.jpg);
+      url(../images/hero-img-tab.jpg);
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
@@ -38,7 +38,7 @@
           rgba(47, 48, 58, 0.4),
           rgba(47, 48, 58, 0.4)
         ),
-        url(../../images/hero-img-tab-2x.jpg);
+        url(../images/hero-img-tab-2x.jpg);
     }
   }
   @media screen and (min-width: 768px) {
@@ -46,7 +46,7 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../../images/hero-img.jpg);
+      url(../images/hero-img.jpg);
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
@@ -54,16 +54,16 @@
           rgba(47, 48, 58, 0.4),
           rgba(47, 48, 58, 0.4)
         ),
-        url(../../images/hero-img-2x.jpg);
+        url(../images/hero-img-2x.jpg);
     }
   }
 }
 
 .hero__container {
-  max-width: 696px;
+  max-width: 360px;
   padding: 0;
-  @media screen and (max-width: 1200px) {
-    max-width: 360px;
+  @media screen and (min-width: 1200px) {
+    max-width: 696px;
   }
 }
 
@@ -81,7 +81,7 @@
 
 .hero__btn {
   @include font(700, 16px, 1.875, 0.06em);
-  min-width: 216px;
+  min-width: 200px;
   height: 50px;
   font-family: "Roboto";
   color: #ffffff;
@@ -91,7 +91,7 @@
   border: none;
   display: block;
   margin: 0 auto;
-  @media screen and (max-width: 1200px) {
-    min-width: 200px;
+  @media screen and (min-width: 1200px) {
+    min-width: 216px;
   }
 }
