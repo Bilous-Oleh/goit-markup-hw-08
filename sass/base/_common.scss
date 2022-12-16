@@ -15,9 +15,6 @@ body {
 
 .section__title {
   @include font(null, 36px, 1.1666, 0.03em);
-  // font-size: 36px;
-  // line-height: 1.1666;
-  // letter-spacing: 0.03em;
   color: var(--second-title-color);
   margin-bottom: 50px;
 }
