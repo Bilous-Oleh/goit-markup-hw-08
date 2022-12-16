@@ -20,7 +20,7 @@
   @media screen and (max-width: 767px) {
     display: none;
   }
-  @media screen and (min-width: 768px) {
+  @include tablet {
     display: flex;
   }
 }
@@ -81,11 +81,11 @@
 
 .contact {
   display: none;
-  @media screen and (min-width: 768px) {
+  @include tablet {
     display: flex;
     flex-direction: column;
   }
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     display: flex;
     flex-direction: row;
   }
@@ -97,7 +97,7 @@
   // font-size: 14px;
   // line-height: 1.1429;
   // letter-spacing: 0.02em;
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -157,7 +157,7 @@
 }
 
 .contact__tel {
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     margin-left: 30px;
   }
 }
@@ -206,7 +206,7 @@
     fill: #2196f3;
   }
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     display: none;
   }
 }
