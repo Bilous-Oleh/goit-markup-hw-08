@@ -1297,7 +1297,10 @@ body {
   }
 }
 
-.soc-list__icon {
+.footer__soc-icon {
+  fill: #afb1b8;
+}
+.footer__soc-icon .footer__soc-icon {
   fill: #ffffff;
 }
 

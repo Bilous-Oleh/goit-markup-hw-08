@@ -146,8 +146,11 @@
   }
 }
 
-.soc-list__icon {
-  fill: #ffffff;
+.footer__soc-icon {
+  fill: #afb1b8;
+  .footer__soc-icon & {
+    fill: #ffffff;
+  }
 }
 
 .footer__link {
